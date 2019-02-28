@@ -4,7 +4,17 @@ def score_submission(slides):
         slide_0 = slides[i][1]
         slide_1 = slides[i+1][1]
         score += min(len(slide_0 & slide_1), len(slide_1 - slide_0), len(slide_0 - slide_1))
-    print(score)
+
+    print('Score: {}'.format(score))
+
+
+def print_solution(slides):
+    print(len(slides))
+    for s in slides:
+        if (len(s) == 2):
+            print('{} {}'.format(s[0], s[1]))
+        else:
+            print(s[0])
 
 
 if __name__ == '__main__':
