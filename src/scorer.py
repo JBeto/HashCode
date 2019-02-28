@@ -11,10 +11,10 @@ def score_submission(slides):
 def print_solution(slides):
     print(len(slides))
     for s in slides:
-        if (len(s) == 2):
-            print('{} {}'.format(s[0], s[1]))
+        if (len(s[0]) == 2):
+            print('{} {}'.format(s[0][0], s[0][1]))
         else:
-            print(s[0])
+            print(s[0][0])
 
 
 if __name__ == '__main__':
