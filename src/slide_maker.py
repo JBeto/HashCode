@@ -1,4 +1,4 @@
-from typing import Set, Tuple, List
+from typing import Set, Tuple, List, Dict
 
 # Takes in input in the form of a list of tuples representing
 # a photo, where the first element is the orientation
@@ -13,10 +13,8 @@ def make_slides(photos: List[Tuple[str, Set[str]]]):
 
     for photo in photos:
         if photo[0] == "H":
-            print("h")
             resultdict[(cnt,)] = photo[1]
         elif photo[0] == "V":
-            print("v")
             verticaldict[cnt] = (cnt, photo[1])
 
         cnt += 1
