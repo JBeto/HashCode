@@ -14,7 +14,7 @@ def make_rev_index (slides: Dict[Tuple[int, int], Set[int]]):
 
 def make_chain (slides, index):
     last = next(iter(slides))
-    print('Starting with {}'.format(last))
+    # print('Starting with {}'.format(last))
     chain = []
 
     chain.append((last, slides[last]))
@@ -23,7 +23,7 @@ def make_chain (slides, index):
     del slides[to_del]
 
     while len(slides) > 0:
-        print('Iteration, with sz left: {}'.format(len(slides)))
+        # print('Iteration, with sz left: {}'.format(len(slides)))
         candidates = set()
 
         for term in last:

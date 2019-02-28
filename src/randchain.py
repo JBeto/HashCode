@@ -23,7 +23,7 @@ def make_chain (slides, index):
     del slides[to_del]
 
     while len(slides) > 0:
-        # print('Iteration, with sz left: {}'.format(len(slides)))
+        print('Iteration, with sz left: {}'.format(len(slides)))
         candidates = set()
 
         for term in last:
