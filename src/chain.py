@@ -46,11 +46,17 @@ def make_chain (slides, index):
                 bestDiff = diff
         
         if best == None:
-            print('RIPPPPPP')
-        
-        chain.append((best, slides[best]))
-        last = slides[best]
-        del slides[best]
+            r = next(iter(slides))
+            # print('R: ', r)
+            best = slides[r]
+            # print('b', best)
+            chain.append((r, slides[r]))
+            del slides[r]
+            # print('RIPPPPPP')
+        else:
+            chain.append((best, slides[best]))
+            last = slides[best]
+            del slides[best]
 
     return chain
 
@@ -58,7 +64,8 @@ if __name__ == '__main__':
     sample = {
         (0,): {'cat', 'beach', 'sun'},
         (1, 2): {'selfie', 'smile', 'garden'},
-        (3,): {'garden', 'cat'}
+        (3,): {'garden', 'cat'},
+        (4,): {},
     }
 
     print(sample)
