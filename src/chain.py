@@ -17,7 +17,7 @@ def make_chain (slides, index):
     print('Starting with {}'.format(last))
     chain = []
 
-    chain.append(last)
+    chain.append((last, slides[last]))
     to_del = last
     last = slides[last]
     del slides[to_del]
@@ -48,7 +48,7 @@ def make_chain (slides, index):
         if best == None:
             print('RIPPPPPP')
         
-        chain.append(best)
+        chain.append((best, slides[best]))
         last = slides[best]
         del slides[best]
 
